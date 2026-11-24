@@ -254,8 +254,7 @@ footer .big{font-size:32px;color:#fff;font-weight:900;font-style:italic;letter-s
 <!-- ENVELOPES -->
 <section>
   <div class="wrap">
-    <div class="reveal" style="text-align:center"><span class="tag"><b>VUELTA 1 · CORREO ESPECIAL</b></span>
-    <h2>Tienes <em>correo</em></h2>
+    <div class="reveal" style="text-align:center"><h2>Tienes <em>correo</em></h2>
     <p class="hint">TOCA CADA SOBRE PARA ABRIRLO ✉️</p></div>
     <div class="envelopes reveal">
       <div class="env" data-src="img/foto1.jpg">
@@ -281,8 +280,7 @@ footer .big{font-size:32px;color:#fff;font-weight:900;font-style:italic;letter-s
 <!-- LETTER -->
 <section>
   <div class="wrap">
-    <div class="reveal" style="text-align:center"><span class="tag"><b>VUELTA 2 · LA CARTA</b></span>
-    <h2>Unas palabras <em>a fondo</em></h2></div>
+    <div class="reveal" style="text-align:center"><h2>Unas palabras <em>a fondo</em></h2></div>
     <article class="letter">
       <div class="wm">#1</div>
       <div class="hello">Querido <span>suegro:</span></div>
@@ -298,15 +296,7 @@ footer .big{font-size:32px;color:#fff;font-weight:900;font-style:italic;letter-s
   </div>
 </section>
 
-<!-- THANKS -->
-<section>
-  <div class="wrap">
-    <div class="reveal"><span class="tag"><b>VUELTA 3 · VUELTAS DE AGRADECIMIENTO</b></span>
-    <h2>Gracias <em>por tanto</em></h2>
-    <p class="hint">TOCA CADA TARJETA PARA DARLE LA VUELTA ↻</p></div>
-    <div class="cards reveal" id="cards"></div>
-  </div>
-</section>
+
 
 <div class="checker"></div>
 
@@ -314,7 +304,6 @@ footer .big{font-size:32px;color:#fff;font-weight:900;font-style:italic;letter-s
 <section>
   <div class="wrap spec">
     <div class="reveal">
-      <span class="tag"><b>VUELTA 4 · FICHA TÉCNICA</b></span>
       <h2>El mejor <em>ingeniero</em></h2>
       <p class="engineer-quote">De todos los ingenieros que he conocido, ninguno combina la cabeza, el corazón y la curiosidad como tú.<b>Modelo único. Edición ilimitada.</b></p>
     </div>
@@ -333,7 +322,6 @@ footer .big{font-size:32px;color:#fff;font-weight:900;font-style:italic;letter-s
 <section>
   <div class="wrap">
     <div class="pitbox reveal">
-      <span class="tag"><b>VUELTA 5 · PARADA EN BOXES</b></span>
       <h2 style="margin-bottom:6px">Ahora te <em>cuento</em> yo</h2>
       <div class="news">ÚLTIMA HORA · CURIOSIDADES SOBRE RUEDAS</div>
       <p style="color:#c4cde6;max-width:640px;margin:0 auto 22px">Tú siempre me traes noticias y datos curiosos. Por una vez, el que trae los datos soy yo:</p>
@@ -349,8 +337,7 @@ footer .big{font-size:32px;color:#fff;font-weight:900;font-style:italic;letter-s
 <!-- FINISH -->
 <section class="finish">
   <div class="wrap">
-    <div class="reveal"><span class="tag"><b>ÚLTIMA VUELTA · BANDERA A CUADROS</b></span>
-    <h2>Acelera a <em>fondo</em></h2>
+    <div class="reveal"><h2>Acelera a <em>fondo</em></h2>
     <p class="hint">DESLIZA EL ACELERADOR HASTA EL FINAL</p></div>
     <div class="throttle reveal">
       <div class="track">
@@ -362,7 +349,7 @@ footer .big{font-size:32px;color:#fff;font-weight:900;font-style:italic;letter-s
     </div>
     <div id="finalMsg">
       <div style="font-size:64px">🏁🎂🏍️</div>
-      <h3>¡Feliz cumpleaños, suegro!</h3>
+      <h3>¡Feliz cumpleaños, papito suegro!</h3>
       <p>Que este nuevo año venga con curvas bonitas, rectas largas y el tanque siempre lleno de felicidad. Que cumplamos muchísimos más juntos. Te quiero mucho.</p>
       <button class="btn" id="again" style="margin-top:22px">🎉 Otra vez</button>
     </div>
@@ -372,7 +359,6 @@ footer .big{font-size:32px;color:#fff;font-weight:900;font-style:italic;letter-s
 <div class="checker"></div>
 <footer>
   <div class="big">Con todo mi cariño, Pipe</div>
-  HECHO A MANO · CON MOTOR Y CORAZÓN · 2026
 </footer>
 
 <script>
@@ -434,21 +420,7 @@ document.querySelectorAll('.env').forEach(env=>{
 });
 lb.onclick=()=>lb.classList.remove('on');
 
-/* cards */
-const thanks=[
- ['⏱️','Momentos','Por tantos momentos que ya son parte de mis recuerdos favoritos.'],
- ['😂','Risas','Por todas las risas, incluso las que me dieron dolor de estómago.'],
- ['🛣️','Experiencias','Por cada experiencia compartida: cada una suma kilómetros al corazón.'],
- ['❤️','Amor','Por tanto amor, dado sin condiciones y sin pedir nada a cambio.'],
- ['🍽️','Invitaciones','Por cada invitación y por hacerme sentir siempre en casa.'],
- ['💬','Conversaciones','Por las charlas largas: las que enseñan y las que simplemente acompañan.'],
- ['🧭','Guías','Por orientarme cuando no tenía claro el camino. Eres mi GPS de confianza.'],
- ['🔧','Aprendizajes','Por todo lo que me has enseñado, de ingeniería y de la vida.']
-];
-const cards=document.getElementById('cards');
-thanks.forEach(([ico,t,txt],i)=>{ const d=document.createElement('div'); d.className='card';
-  d.innerHTML=`<div class="in"><div class="f"><span class="lap">VUELTA ${String(i+1).padStart(2,'0')}</span><span class="ico">${ico}</span><h3><small>GRACIAS POR</small>${t}</h3></div><div class="b">${txt}</div></div>`;
-  d.onclick=()=>{ d.classList.toggle('flip'); ac(); blip(); }; cards.appendChild(d); });
+
 
 /* facts */
 const facts=[
